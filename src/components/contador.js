@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Contador = (props) => {
+  const { handleAdd, handleDelete } = props;
+
   return(
     <React.Fragment>
         <h2>Reservación</h2>
@@ -8,23 +10,12 @@ const Contador = (props) => {
           <table>
             <tr>
               <td>
-                <button 
-                  onClick={
-                    ()=>props.handleDelete()
-                  }
-                >
+                <button onClick={ handleDelete }>
                   -
                 </button>
               </td>
               <td>
-                {props.value}
-              </td>
-              <td>
-                <button 
-                  onClick={
-                    ()=>props.handleAdd()
-                  }
-                >
+                <button onClick={ handleAdd }>
                   +
                 </button>
               </td>
